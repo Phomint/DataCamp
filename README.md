@@ -20,6 +20,9 @@ Repositório de estudos do curso **DataCamp**, contendo lições práticas e pro
 │   │   ├── 4. Handling Images with PyTorch.ipynb
 │   │   ├── 5. Convolutional Neural Network.ipynb
 │   │   ├── 6. Training Image classifiers.ipynb
+│   │   ├── 7. Evaluating image classifiers.ipynb
+│   │   ├── 8. Handling sequences with PyTorch.ipynb
+│   │   ├── 8.LD2011_2014.txt
 │   │   └── imageclassifier.py
 │   └── Introduction to Spark SQL in Python/
 │       └── logging.ipynb
@@ -39,14 +42,14 @@ Módulo focado em técnicas de explicabilidade de modelos de machine learning.
 
 - **metrics.ipynb** — Métricas de explicabilidade, incluindo **Consistency** (estabilidade das explicações quando o modelo é treinado em diferentes subconjuntos de dados).
 - **Local explainability with LIME** — Implementação do **LIME** (Local Interpretable Model-Agnostic Explanations), técnica que explica predições de modelos complexos de forma local e agnóstica ao tipo de modelo.
-- **Explaining chat-based genAI models** — Técnicas de explicabilidade aplicadas a modelos generativos de linguagem baseados em chat.
-- **Explaining unsupervised models** — Explicabilidade aplicada a modelos não supervisionados, como algoritmos de clustering.
+- **Explaining chat-based genAI models** — Técnicas de explicabilidade aplicadas a modelos generativos de linguagem baseados em chat. Aborda como modelos de IA generativa geram texto com base em contexto e conhecimento, e como interpretar suas predições.
+- **Explaining unsupervised models** — Explicabilidade aplicada a modelos não supervisionados. Foca em algoritmos de **clustering** (agrupamento de pontos de dados similares sem rótulos pré-definidos) e como interpretar os grupos formados.
 
 ---
 
 ### 🧠 Intermediate Deep Learning with PyTorch
 
-Módulo de deep learning intermediário com PyTorch, cobrindo desde fundamentos de OOP até redes neurais convolucionais.
+Módulo de deep learning intermediário com PyTorch, cobrindo desde fundamentos de OOP até redes neurais convolucionais e modelos sequenciais.
 
 | Notebook | Conteúdo |
 |---|---|
@@ -56,6 +59,11 @@ Módulo de deep learning intermediário com PyTorch, cobrindo desde fundamentos 
 | 4. Handling Images with PyTorch | Manipulação e pré-processamento de imagens |
 | 5. Convolutional Neural Network | Arquitetura e implementação de CNNs |
 | 6. Training Image classifiers | Treinamento completo de classificadores de imagem |
+| 7. Evaluating image classifiers | Avaliação de classificadores de imagem, incluindo técnicas como **data augmentation em tempo de teste** |
+| 8. Handling sequences with PyTorch | Dados sequenciais (séries temporais, texto, áudio) e previsão de consumo de energia elétrica com divisão temporal de treino/teste |
+
+**Dataset:**
+- **8.LD2011_2014.txt** — Dataset de consumo de energia elétrica (ElectricityLoadDiagrams 2011–2014), utilizado no notebook 8 para previsão de séries temporais.
 
 ---
 
