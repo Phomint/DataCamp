@@ -9,9 +9,12 @@ Repositório de estudos do curso **DataCamp**, contendo lições práticas e pro
 ```
 ├── lessons/
 │   ├── Explainability Metrics/
-│   │   ├── Local explainability with LIME/
 │   │   ├── Explaining chat-based genAI models/
+│   │   │   └── chat_based_generative.ipynb
 │   │   ├── Explaining unsupervised models/
+│   │   │   └── clustering.ipynb
+│   │   ├── Local explainability with LIME/
+│   │   │   └── limeexample.ipynb
 │   │   └── metrics.ipynb
 │   ├── Intermediate Deep Learning with PyTorch/
 │   │   ├── 1. PyTorch and object-oriented programing.ipynb
@@ -22,13 +25,23 @@ Repositório de estudos do curso **DataCamp**, contendo lições práticas e pro
 │   │   ├── 6. Training Image classifiers.ipynb
 │   │   ├── 7. Evaluating image classifiers.ipynb
 │   │   ├── 8. Handling sequences with PyTorch.ipynb
-│   │   ├── 8.LD2011_2014.txt
+│   │   ├── 9. Recurrent Neural Networks.ipynb
+│   │   ├── 10. LSTM and GRU cells.ipynb
+│   │   ├── 11. Training and evaluating RNNs.ipynb
+│   │   ├── 12. Multi-input models.ipynb
+│   │   ├── 13. Multi-output models.ipynb
+│   │   ├── 14. Evaluation of multi-output models and loss weighting.ipynb
 │   │   └── imageclassifier.py
 │   └── Introduction to Spark SQL in Python/
 │       └── logging.ipynb
 └── projects/
-    └── Dr. Semmelweis and the Discovery of Handwashing/
-        ├── datasets/
+    ├── Dr. Semmelweis and the Discovery of Handwashing/
+    │   ├── datasets/
+    │   └── notebook.ipynb
+    └── Project: Developing Multi-Input Models For OCR/
+        ├── digitizing_team.png
+        ├── ocr_insurance_dataset.pkl
+        ├── project_utils.py
         └── notebook.ipynb
 ```
 
@@ -60,10 +73,13 @@ Módulo de deep learning intermediário com PyTorch, cobrindo desde fundamentos 
 | 5. Convolutional Neural Network | Arquitetura e implementação de CNNs |
 | 6. Training Image classifiers | Treinamento completo de classificadores de imagem |
 | 7. Evaluating image classifiers | Avaliação de classificadores de imagem, incluindo técnicas como **data augmentation em tempo de teste** |
-| 8. Handling sequences with PyTorch | Dados sequenciais (séries temporais, texto, áudio) e previsão de consumo de energia elétrica com divisão temporal de treino/teste |
-
-**Dataset:**
-- **8.LD2011_2014.txt** — Dataset de consumo de energia elétrica (ElectricityLoadDiagrams 2011–2014), utilizado no notebook 8 para previsão de séries temporais.
+| 8. Handling sequences with PyTorch | Dados sequenciais (séries temporais, texto, áudio) e previsão de consumo de energia elétrica |
+| 9. Recurrent Neural Networks | Introdução a RNNs, neurônios recorrentes e Deep RNNs |
+| 10. LSTM and GRU cells | Células LSTM e GRU para lidar com o problema de memória de curto prazo |
+| 11. Training and evaluating RNNs | Loop de treinamento e avaliação para modelos baseados em RNN |
+| 12. Multi-input models | Modelos multi-modais que processam diferentes tipos de entrada (ex: imagem e texto) |
+| 13. Multi-output models | Modelos que realizam múltiplas tarefas de predição simultaneamente |
+| 14. Evaluation of multi-output models | Avaliação de modelos multi-saída e ponderação de perdas (loss weighting) |
 
 ---
 
@@ -98,11 +114,30 @@ Projeto de análise de dados históricos baseado no trabalho do Dr. Ignaz Semmel
 
 ---
 
+### 🆔 Project: Developing Multi-Input Models For OCR
+
+Projeto focado no desenvolvimento de um modelo de OCR (Optical Character Recognition) multi-modal para a DigiNsure Inc., visando a digitalização e classificação de documentos de seguros.
+
+**Linguagem:** Python (com `PyTorch`, `Pandas` e `Matplotlib`)
+
+**Componentes:**
+- `notebook.ipynb` — Implementação do pipeline de dados, arquitetura do modelo e loop de treinamento.
+- `project_utils.py` — Utilitários para geração de dados sintéticos e visualização.
+- `ocr_insurance_dataset.pkl` — Dataset contendo imagens de códigos e seus respectivos tipos de seguro.
+
+**Análises e Implementações:**
+1. **Fusão Multi-modal:** Combinação de dados de imagem (scans) e metadados textuais (tipo de seguro).
+2. **Arquitetura CNN:** Camadas convolucionais para extração de características visuais dos documentos.
+3. **Classificação Binária:** Identificação de documentos como IDs primários ou secundários.
+4. **Data Pipeline:** Uso de `Dataset` e `DataLoader` customizados para processamento eficiente.
+
+---
+
 ## 🛠️ Tecnologias Utilizadas
 
-- **Python** — Linguagem principal das lições
+- **Python** — Linguagem principal das lições e projetos
 - **R** — Utilizado no projeto do Dr. Semmelweis
-- **PyTorch** — Framework de deep learning
+- **PyTorch** — Framework principal de deep learning
 - **Apache Spark** — Processamento de dados em larga escala
 - **LIME** — Explicabilidade local de modelos
 - **tidyverse / ggplot2** — Manipulação e visualização de dados em R
@@ -115,7 +150,8 @@ Projeto de análise de dados históricos baseado no trabalho do Dr. Ignaz Semmel
 Este repositório documenta o progresso de estudos na plataforma **DataCamp**, cobrindo tópicos de:
 
 - Análise exploratória de dados
-- Deep Learning com PyTorch
+- Deep Learning (CNNs, RNNs, LSTMs, GRUs)
+- Modelos multi-input e multi-output
 - Explicabilidade de modelos de ML/AI
 - Engenharia de dados com Spark
-- Boas práticas de logging e debugging
+- Automação de OCR e digitalização de documentos
